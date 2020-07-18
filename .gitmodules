@@ -1,0 +1,3 @@
+[submodule "bin/crisporWebsite"]
+	path = bin/crisporWebsite
+	url = https://github.com/maximilianh/crisporWebsite.git
