@@ -1,0 +1,66 @@
+$schema: "http://json-schema.org/draft-06/schema#"
+
+description: snakemake configuration file
+
+type: object
+
+properties:
+  GeneID:
+    type: string
+
+  ref:
+    type: object
+    properties:
+      genome_name:
+        type: string
+      genome:
+        type: string
+      genome_gff:
+        type: string
+      genome_mRNA:
+        type: string
+    required:
+      - genome_name
+      - genome
+      - genome_gff
+      - genome_mRNA
+
+  workdir:
+    type: string
+
+  module:
+    type: object
+    properties:
+      Cas9:
+        type: boolean
+      cpf1:
+        type: boolean
+      c2c1:
+        type: boolean
+      ABE:
+        type: boolean
+      CBE:
+        type: boolean
+      GhSpliceR:
+        type: boolean
+      GhiSTOP:
+        type: boolean
+
+  quickly:
+    type: boolean
+
+  windows:
+    type: object
+    properties:
+      ABE:
+        type: string
+      CBE:
+        type: string
+
+required:
+  - GeneID
+  - ref
+  - workdir
+  - module
+  - quickly
+  - windows

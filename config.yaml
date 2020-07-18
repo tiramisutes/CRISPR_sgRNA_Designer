@@ -1,0 +1,38 @@
+# path or URL to sample sheet (TSV format, columns: GeneID)
+GeneID: GeneID.tsv
+
+ref:
+  # the genome name
+  genome_name: "Gossypium_hirsutum_TM-1"
+  # the genome fasta file
+  genome: "/public/home/zpxu/Gh_Genome/Ghirsutum_genome.fasta"
+  # gff3 file with transcripts
+  genome_gff: "/public/home/zpxu/Gh_Genome/Ghirsutum_gene_model.gff3"
+  # mRNA file with transcripts
+  genome_mRNA: "/public/home/zpxu/Gh_Genome/Ghirsutum_gene_CDS.fasta"
+
+software:
+  R: "module load R/3.6.0"
+  CasOFFinder: "module load Cas-OFFinder/2.4"
+  CasDesigner: 'export PATH=$PATH:/public/home/zpxu/software/Cas-Designer'
+  UCSCscripts: 'export PATH="$PATH:/public/home/zpxu/software/UCSC_scripts"'
+
+
+workdir: "/public/home/zpxu/CRISPR/wgy/ABE_CBE/CRISPR_sgRNA_Designer"
+
+module: 
+  Cas9: true
+  cpf1: true
+  c2c1: true
+  ABE: true
+  CBE: true
+  GhSpliceR: true
+  GhiSTOP: true
+
+## Run in quickly module than Cas9_Cas_Designer will not run.
+## Especially for Cas9_Cas_Designer, It's too slow.
+quickly: true
+
+windows:
+  ABE: "--window_st 14 --window_ed 16"
+  CBE: "--window_st 13 --window_ed 17"

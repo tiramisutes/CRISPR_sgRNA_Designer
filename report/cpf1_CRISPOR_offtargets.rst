@@ -1,0 +1,1 @@
+The cpf1/Cas12a off targets sgRNA that desiger by `CRISPOR <http://crispor.tefor.net/>`_.

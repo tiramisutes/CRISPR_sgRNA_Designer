@@ -1,0 +1,1 @@
+The sgRNA for c2c1/Cas12b editor (PAM: TTN + 20bp) that degiger by `sgRNAcas9 <http://tiramisutes.github.io/tiramisutes.github.io/2017/01/13/CRISPR-Designer.html>`_.

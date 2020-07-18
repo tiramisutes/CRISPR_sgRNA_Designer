@@ -1,0 +1,1 @@
+The cpf1/Cas12a sgRNA (TTTN + 23bp) that desiger by `CRISPOR <http://crispor.tefor.net/>`_.

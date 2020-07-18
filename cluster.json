@@ -1,0 +1,23 @@
+{
+    "__default__" :
+    {
+        "queue"     : "normal",
+        "name"      : "JOBNAME.{rule}.{wildcards}",
+        "output"    : "logs/cluster/{rule}.{wildcards}.out",
+        "error"     : "logs/cluster/{rule}.{wildcards}.err"
+    },
+
+
+    "Cas9_Cas_Designer" :
+    {
+        "queue"     : "gpu"
+    },
+    "ABE_BE_Designer" :
+    {
+        "queue"     : "gpu"
+    },
+    "CBE_BE_Designer" :
+    {
+        "queue"     : "gpu"
+    },
+}

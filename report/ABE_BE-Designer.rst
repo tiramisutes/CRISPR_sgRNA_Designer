@@ -1,0 +1,1 @@
+The sgRNA for ABE editor that degiger by `BEDesigner <http://www.rgenome.net/be-designer/>`_.
