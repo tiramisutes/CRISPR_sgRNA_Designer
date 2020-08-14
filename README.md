@@ -16,9 +16,6 @@ This workflow performs sgRNA designer for CRISPR genome edit, which includes Cas
 
 #### Step 1: Install workflow / git clone
 
-If you simply want to use this workflow, download and extract the [latest release](https://github.com/snakemake-workflows/rna-seq-star-deseq2/releases).
-If you intend to modify and further extend this workflow or want to work under version control, fork this repository as outlined in [Advanced](#advanced). The latter way is recommended.
-
 In any case, if you use this workflow in a paper, don't forget to give credits to the authors by citing the URL of this repository and, if available, its DOI (see above).
 
 Git clone this repository using follows command 👇

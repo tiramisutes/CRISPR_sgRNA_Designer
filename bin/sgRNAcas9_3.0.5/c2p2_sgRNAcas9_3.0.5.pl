@@ -794,7 +794,7 @@ my $File1 = "$dir/c2p2.sgRNAcas9.report_$truncat.$Option.$faname/single_and_ot.t
 my ($Risk_evaluation);
 
 open( PA, "$File1" ) || die "can't open $File1!";
-open( PAIRS1, ">$dir/c2p2.sgRNAcas9.report_$truncat.$Option.$faname/c2p2_$faname_sgRNAcas9_report.xls" ) || die "can't open c2p2_$faname_sgRNAcas9_report.xls!";
+open( PAIRS1, ">$dir/c2p2.sgRNAcas9.report_$truncat.$Option.$faname/c2p2_$faname._sgRNAcas9_report.xls" ) || die "can't open c2p2_$faname._sgRNAcas9_report.xls!";
 
 print PAIRS1 "sgRID\t"."Start\t"."End\t"."Protospacer_sequence+PAM(5'-3')\t"."Length(nt)\t"."GC%_of_Protospacer\t"."Protospacer+PAM(OT)\t"."0M(on-/off-)\t"."1M\t"."2M\t"."3M\t"."4M\t"."5M\t"."Total_No.of_OT\t"."Risk_evaluation\n";
 

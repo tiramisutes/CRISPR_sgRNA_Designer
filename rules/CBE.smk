@@ -4,7 +4,7 @@ rule CBE_BE_Designer:
         CBEexonseq = "Resources/{GeneID}_CBE_exon.fa"
     output:
         #directory("CBE_BE-Designer/{GeneID}")
-        report(directory("CBE_BE-Designer/{GeneID}"), patterns=["{name}_CBE_results.txt"], caption="../report/CBE_BE-Designer.rst", category="5-1. CRISPR/CBE")
+        report(directory("CBE_BE-Designer/{GeneID}"), patterns=["{name}_CBE_results.txt"], caption="../report/CBE_BE-Designer.rst", category="5-1. CRISPR/BE_Designer_CBE")
     threads: 1
     log:
         "logs/CBE_{GeneID}.log"
@@ -34,7 +34,7 @@ rule CBE_Merge_Gene:
     input:
         "CBE_BE-Designer/{GeneID}"
     output:
-        report("CBE_Merge_Gene/All_{GeneID}_CBE_sgRNA.csv", caption="../report/CBE_Merge_Gene.rst", category="5-2. CBE_Merge_gene")
+        report("CBE_Merge_Gene/All_{GeneID}_CBE_sgRNA.csv", caption="../report/CBE_Merge_Gene.rst", category="5-2. BE_Designer_CBE_Merge_gene")
     threads: 1
     params:
         "_CBE_results.txt"
@@ -50,7 +50,7 @@ rule CBE_Merge:
     input:
         expand("CBE_Merge_Gene/All_{GeneID.GeneID}_CBE_sgRNA.csv", GeneID=GeneIDs.itertuples())
     output:
-        report("CBE_Merge/All_CBE_sgRNA.csv", caption="../report/CBE_Merge.rst", category="5-3. CBE_Merge")
+        report("CBE_Merge/All_CBE_sgRNA.csv", caption="../report/CBE_Merge.rst", category="5-3. BE_Designer_CBE_Merge")
     threads: 1
     conda:
         "../envs/R.yaml"
@@ -64,7 +64,7 @@ rule CBE_sgRNAcas9:
     input:
         resf = "BE_sgRNAcas9_3.0.5/sgRNAcas9.report_20.s.{GeneID}.mRNA.fa"
     output:
-        CBE = report("CBE_sgRNAcas9_3.0.5/{GeneID}_sgRNAcas9_CBE_report.xls", caption="../report/CBE_sgRNAcas9.rst", category="5-4. CRISPR/CBE")
+        CBE = report("CBE_sgRNAcas9_3.0.5/{GeneID}_sgRNAcas9_CBE_report.xls", caption="../report/CBE_sgRNAcas9.rst", category="5-4. CRISPR/sgRNAcas9_CBE")
     threads: 1
     log:
         "logs/CBE_sgRNAcas9_{GeneID}.log"

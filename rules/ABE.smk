@@ -4,7 +4,7 @@ rule ABE_BE_Designer:
         ABEexonseq = "Resources/{GeneID}_ABE_exon.fa"
     output:
         #directory("ABE_BE-Designer/{GeneID}")
-        report(directory("ABE_BE-Designer/{GeneID}"), patterns=["{name}_ABE_results.txt"], caption="../report/ABE_BE-Designer.rst", category="4-1. CRISPR/ABE")
+        report(directory("ABE_BE-Designer/{GeneID}"), patterns=["{name}_ABE_results.txt"], caption="../report/ABE_BE-Designer.rst", category="4-1. CRISPR/BE_Designer_ABE")
     threads: 1
     log:
         "logs/ABE_{GeneID}.log"
@@ -34,7 +34,7 @@ rule ABE_Merge_Gene:
     input:
         "ABE_BE-Designer/{GeneID}"
     output:
-        report("ABE_Merge_Gene/All_{GeneID}_ABE_sgRNA.csv", caption="../report/ABE_Merge_Gene.rst", category="4-2. ABE_Merge_gene")
+        report("ABE_Merge_Gene/All_{GeneID}_ABE_sgRNA.csv", caption="../report/ABE_Merge_Gene.rst", category="4-2. BE_Designer_ABE_Merge_gene")
     threads: 1
     params:
         "_ABE_results.txt"
@@ -50,7 +50,7 @@ rule ABE_Merge:
     input:
         expand("ABE_Merge_Gene/All_{GeneID.GeneID}_ABE_sgRNA.csv", GeneID=GeneIDs.itertuples())
     output:
-        report("ABE_Merge/All_ABE_sgRNA.csv", caption="../report/ABE_Merge.rst", category="4-3. ABE_Merge")
+        report("ABE_Merge/All_ABE_sgRNA.csv", caption="../report/ABE_Merge.rst", category="4-3. BE_Designer_ABE_Merge")
     threads: 1
     conda:
         "../envs/R.yaml"
@@ -64,7 +64,7 @@ rule ABE_sgRNAcas9:
     input:
         resf = "BE_sgRNAcas9_3.0.5/sgRNAcas9.report_20.s.{GeneID}.mRNA.fa"
     output:
-        ABE = report("ABE_sgRNAcas9_3.0.5/{GeneID}_sgRNAcas9_ABE_report.xls", caption="../report/ABE_sgRNAcas9.rst", category="4-4. CRISPR/ABE")
+        ABE = report("ABE_sgRNAcas9_3.0.5/{GeneID}_sgRNAcas9_ABE_report.xls", caption="../report/ABE_sgRNAcas9.rst", category="4-4. CRISPR/sgRNAcas9_ABE")
     threads: 1
     log:
         "logs/ABE_sgRNAcas9_{GeneID}.log"

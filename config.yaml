@@ -18,7 +18,7 @@ software:
   UCSCscripts: 'export PATH="$PATH:/public/home/zpxu/software/UCSC_scripts"'
 
 
-workdir: "/public/home/zpxu/CRISPR/wgy/ABE_CBE/CRISPR_sgRNA_Designer"
+workdir: "/public/home/zpxu/Bohou/CRISPR/Snakemake_CRISPR_sgRNA_Designer"
 
 module: 
   Cas9: true

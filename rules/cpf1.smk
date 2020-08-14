@@ -3,7 +3,7 @@ rule cpf1_sgRNAcas9:
         genome = config["ref"]["genome"],
         geneseq = "Resources/{GeneID}.mRNA.fa"
     output:
-        res = report(directory("cpf1_sgRNAcas9_3.0.5/cpf1.sgRNAcas9.report_23.b.{GeneID}.mRNA.fa"), patterns=["{name}_sgRNAcas9_report.xls"], caption="../report/cpf1_sgRNAcas9.rst", category="2-1. CRISPR/cpf1"),
+        res = report(directory("cpf1_sgRNAcas9_3.0.5/cpf1.sgRNAcas9.report_23.b.{GeneID}.mRNA.fa"), patterns=["{name}_sgRNAcas9_report.xls"], caption="../report/cpf1_sgRNAcas9.rst", category="2-1. CRISPR/sgRNAcas9_cpf1"),
         fres = temp(directory("cpf1_sgRNAcas9_3.0.5/{GeneID}"))
     threads: 1
     log:
@@ -25,8 +25,8 @@ rule cpf1_CRISPOR:
         genomedb = "AddGenome",
         exonseq = "Resources/{GeneID}_exon.fa"
     output:
-        targets = report("cpf1_CRISPOR/{GeneID}_targets.xls", caption="../report/cpf1_CRISPOR_targets.rst", category="2-2. CRISPR/cpf1"),
-        offtargets = report("cpf1_CRISPOR/{GeneID}_Offtargets.xls", caption="../report/cpf1_CRISPOR_offtargets.rst", category="2-2. CRISPR/cpf1"),
+        targets = report("cpf1_CRISPOR/{GeneID}_targets.xls", caption="../report/cpf1_CRISPOR_targets.rst", category="2-2. CRISPR/CRISPOR_cpf1"),
+        offtargets = report("cpf1_CRISPOR/{GeneID}_Offtargets.xls", caption="../report/cpf1_CRISPOR_offtargets.rst", category="2-2. CRISPR/CRISPOR_cpf1"),
         TMP = temp(directory("cpf1_CRISPOR/{GeneID}"))
     threads: 1
     log:

@@ -1020,7 +1020,7 @@ my ($ID_POT2, $M0_POT2, $M1_POT2,$M2_POT2, $M3_POT2, $M4_POT2,$M5_POT2,$OT_POT2,
 
 open( PA, "$File1" ) || die "can't open $File1!";
 open( PS, "$File2" ) || die "can't open $File2!";
-open( PAIRS1, ">$dir/sgRNAcas9.report_$truncat.$Option.$faname/Cas9_$faname_sgRNAcas9_report.xls" ) || die "can't open Cas9_$faname_sgRNAcas9_report.xls!";
+open( PAIRS1, ">$dir/sgRNAcas9.report_$truncat.$Option.$faname/Cas9_$faname._sgRNAcas9_report.xls" ) || die "can't open Cas9_$faname._sgRNAcas9_report.xls!";
 
 print PAIRS1 "sgRID\t"."Start\t"."End\t"."Protospacer_sequence+PAM(5'-3')\t"."Length(nt)\t"."GC%_of_Protospacer\t"."Protospacer+PAM(OT)\t"."0M(on-/off-)\t"."1M\t"."2M\t"."3M\t"."4M\t"."5M\t"."Total_No.of_OT\t"."Seed_12+PAM(POT)\t"."0M(on-/off-)\t"."1M\t"."2M\t"."3M\t"."4M\t"."5M\t"."Total_No.of_POT\t"."Risk_evaluation\n";
 
